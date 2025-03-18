@@ -29,6 +29,18 @@
                 Console.WriteLine("Lado Y: " + ladoY);
                 Console.WriteLine("Lado Z: " + ladoZ);
 
+                // verificar a validade do triângulo
+                bool medidasTrianguloValidas = 
+                    ladoX + ladoY > ladoZ && 
+                    ladoX + ladoZ > ladoY &&
+                    ladoY + ladoZ > ladoX;
+
+                if (medidasTrianguloValidas == true)
+                    Console.WriteLine("O triângulo é válido!");
+                else
+                    Console.WriteLine("Os valores informados não formam um triângulo válido");
+
+                Console.WriteLine("---------------------------------------------");
                 Console.Write("Deseja continuar? (S/N) ");
                 string opcaoContinuar = Console.ReadLine()!.ToUpper();
 
