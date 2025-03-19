@@ -13,14 +13,40 @@
                 Console.WriteLine("-----------------------------------------------");
 
                 // receber a entrada (input) de dados
-                Console.Write("Informe o valor do lado X: ");
-                int ladoX = Convert.ToInt32(Console.ReadLine());
+                int ladoX;
 
-                Console.Write("Informe o valor do lado Y: ");
-                int ladoY = Convert.ToInt32(Console.ReadLine());
+                while (true)
+                {
+                    Console.Write("Informe o valor do lado X: ");
 
-                Console.Write("Informe o valor do lado Z: ");
-                int ladoZ = Convert.ToInt32(Console.ReadLine());
+                    bool conseguiuConverter = int.TryParse(Console.ReadLine(), out ladoX);
+
+                    if (conseguiuConverter)
+                        break;
+                }
+
+                int ladoY;
+
+                while (true)
+                {
+                    Console.Write("Informe o valor do lado Y: ");
+
+                    bool conseguiuConverter = int.TryParse(Console.ReadLine(), out ladoY);
+                    if (conseguiuConverter)
+                        break;
+                }
+
+                int ladoZ;
+
+                while (true)
+                {
+                    Console.Write("Informe o valor do lado Z: ");
+
+                    bool conseguiuConverter = int.TryParse(Console.ReadLine(), out ladoZ);
+
+                    if (conseguiuConverter)
+                        break;
+                }
 
                 // exibir os valores digitados
                 Console.WriteLine("-----------------------------------------------");
