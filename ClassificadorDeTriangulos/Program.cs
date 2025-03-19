@@ -6,13 +6,13 @@
         {
             while (true)
             {
-                // exibir o cabecalho
+                // exibir o cabeçalho
                 Console.Clear();
-                Console.WriteLine("---------------------------------------------");
+                Console.WriteLine("-----------------------------------------------");
                 Console.WriteLine("Classificador de Triângulos");
-                Console.WriteLine("---------------------------------------------");
+                Console.WriteLine("-----------------------------------------------");
 
-                // receber a entrada (input) do usuário
+                // receber a entrada (input) de dados
                 Console.Write("Informe o valor do lado X: ");
                 int ladoX = Convert.ToInt32(Console.ReadLine());
 
@@ -22,26 +22,15 @@
                 Console.Write("Informe o valor do lado Z: ");
                 int ladoZ = Convert.ToInt32(Console.ReadLine());
 
-                // exibir  os valores digitados
-                Console.WriteLine("---------------------------------------------");
-                Console.WriteLine("Valores informados: ");
+                // exibir os valores digitados
+                Console.WriteLine("-----------------------------------------------");
+                Console.WriteLine("Valores informados:");
                 Console.WriteLine("Lado X: " + ladoX);
                 Console.WriteLine("Lado Y: " + ladoY);
                 Console.WriteLine("Lado Z: " + ladoZ);
 
-                // verificar a validade do triângulo
-                bool medidasTrianguloValidas = 
-                    ladoX + ladoY > ladoZ && 
-                    ladoX + ladoZ > ladoY &&
-                    ladoY + ladoZ > ladoX;
-
-                if (medidasTrianguloValidas == true)
-                    Console.WriteLine("O triângulo é válido!");
-                else
-                    Console.WriteLine("Os valores informados não formam um triângulo válido");
-
-                Console.WriteLine("---------------------------------------------");
-                Console.Write("Deseja continuar? (S/N) ");
+                Console.WriteLine("-----------------------------------------------");
+                Console.Write("Deseja continuar? (s/N) ");
                 string opcaoContinuar = Console.ReadLine()!.ToUpper();
 
                 if (opcaoContinuar != "S")
